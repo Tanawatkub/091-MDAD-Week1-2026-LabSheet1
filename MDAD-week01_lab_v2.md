@@ -883,6 +883,27 @@ class _MyHomePageState extends State<MyHomePage> {
 
 > 📝 **แบบฝึกหัด:** วาด Widget Tree ของโค้ดนี้ลงในใบงาน
 
+```
+MyApp (StatelessWidget)
+  └── MaterialApp
+        └── MyHomePage (StatefulWidget)
+              └── Scaffold
+                    ├── appBar: AppBar
+                    │     └── title: Text ("Flutter Demo Home Page")
+                    │
+                    ├── body: Center
+                    │     └── Column
+                    │           ├── children: [
+                    │           │     ├── Text ("You have pushed the button this many times:")
+                    │           │     └── Text ("$_counter")
+                    │           │ ]
+                    │
+                    └── floatingActionButton: FloatingActionButton
+                          └── child: Icon (Icons.add)
+```
+
+
+
 ---
 
 ### ขั้นตอนที่ 4: รันแอปพลิเคชันครั้งแรก
@@ -1070,7 +1091,7 @@ class ProfilePage extends StatelessWidget {
 6. ลองกด **R** ใน Terminal เพื่อ Hot Restart
 
 > 🔍 **ข้อสังเกต:** Hot Reload vs Hot Restart ต่างกันอย่างไร? บันทึกการสังเกตลงในใบงาน
-
+![alt text](image-12.png)
 ---
 
 ## 🧪 การทดลองที่ 3: ทดลองใช้งาน Google AI Studio
@@ -1133,7 +1154,8 @@ class ProfilePage extends StatelessWidget {
 ```
 
 > 🔍 **เปรียบเทียบ:** ผลลัพธ์จาก Prompt แบบ Simple vs Detailed ต่างกันอย่างไร?
-
+![alt text](image-13.png)
+![alt text](image-14.png)
 ---
 
 ### ขั้นตอนที่ 3: สร้าง API Key
@@ -1436,7 +1458,7 @@ Android SDK Version: 36.1.0
 **Widget Tree ที่วาด:**
 
 ```
-![alt text](image-11.png)
+![alt text](image-15.png)
 
 MaterialApp
 └── ?
