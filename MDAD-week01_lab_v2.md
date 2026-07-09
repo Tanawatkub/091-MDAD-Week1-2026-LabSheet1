@@ -886,7 +886,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 > 📝 **แบบฝึกหัด:** วาด Widget Tree ของโค้ดนี้ลงในใบงาน
 ``
-![alt text](image-1.png)
+<img width="1892" height="982" alt="image" src="https://github.com/user-attachments/assets/898bf428-7378-4500-b7b4-6a62c82be47e" />
+
 
 
 ---
@@ -1077,7 +1078,8 @@ class ProfilePage extends StatelessWidget {
 
 > 🔍 **ข้อสังเกต:** Hot Reload vs Hot Restart ต่างกันอย่างไร? บันทึกการสังเกตลงในใบงาน
 
-![alt text](image-2.png)
+<img width="2254" height="494" alt="image" src="https://github.com/user-attachments/assets/c2b0abf4-b0f6-48c6-965e-76c97e46446f" />
+
 ---
 
 ## 🧪 การทดลองที่ 3: ทดลองใช้งาน Google AI Studio
@@ -1140,8 +1142,9 @@ class ProfilePage extends StatelessWidget {
 ```
 
 > 🔍 **เปรียบเทียบ:** ผลลัพธ์จาก Prompt แบบ Simple vs Detailed ต่างกันอย่างไร?
-![alt text](image-3.png)
-![alt text](image-4.png)
+<img width="1414" height="928" alt="image" src="https://github.com/user-attachments/assets/e2cd385b-df1b-4dc0-a478-5f958f3e64af" />
+
+<img width="1400" height="936" alt="image" src="https://github.com/user-attachments/assets/cbe61477-c815-4cf7-a435-1689d3d3f27b" />
 
 ---
 
@@ -1427,7 +1430,8 @@ flutter run
 flutter doctor output:
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
-│         ![alt text](image-5.png)                        │
+│         <img width="2036" height="948" alt="image" src="https://github.com/user-attachments/assets/31d1560f-cf4d-4470-ba22-45b3e33eb5eb" />
+                       │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 
@@ -1439,13 +1443,15 @@ Android SDK Version: 36.1.0
 ### 3.2 Screenshot ของ Flutter App
 
 ```
-![alt text](image-6.png)
+<img width="2446" height="1674" alt="image" src="https://github.com/user-attachments/assets/96fa7295-dfd4-49d5-8988-50d163ea1c33" />
+
 
 
 **Widget Tree ที่วาด:**
 
 ``
-![alt text](image-7.png)
+<img width="890" height="946" alt="image" src="https://github.com/user-attachments/assets/0ddd7f25-6012-4a92-9132-f748ed7c77a8" />
+
 
 
 MaterialApp
@@ -1474,7 +1480,8 @@ MaterialApp
 
 ใช้ Material Design 3 และรับค่าผ่าน Constructor Parameters
 
-![alt text](image-8.png)
+<img width="1404" height="942" alt="image" src="https://github.com/user-attachments/assets/2da9ba56-23ce-49c3-8aaf-12730c4e0389" />
+
 
 ```
 
@@ -1662,28 +1669,32 @@ class WeatherCard extends StatelessWidget {
   }
 }
 ```
-![alt text](image-9.png)
+<img width="1392" height="926" alt="image" src="https://github.com/user-attachments/assets/bf13a378-4165-4a39-928d-4bcc655c4d7d" />
+
 
 ```
 
 **ความแตกต่างของผลลัพธ์:**
 ```
-![alt text](image-10.png)
+<img width="1414" height="928" alt="image" src="https://github.com/user-attachments/assets/40345075-735c-4b64-a1bf-5631ebd2ccc9" />
 
-![alt text](image-11.png)
+
+<img width="1392" height="926" alt="image" src="https://github.com/user-attachments/assets/7ba9f77a-7c51-4b6f-a854-408a14b99fb1" />
+
 ที่ต่างคือสี
 ```
 
 ### 3.5 Screenshot ของ AI Chat App
 
 ```
-![alt text](image-12.png)
+<img width="1342" height="936" alt="image" src="https://github.com/user-attachments/assets/8e6e6712-dbf5-49ad-8030-184fd94b1148" />
 
-![alt text](image-13.png)
+<img width="1490" height="932" alt="image" src="https://github.com/user-attachments/assets/3b402f0e-f42a-4ec5-b537-a3e3caeb72b6" />
 
-![alt text](image-14.png)
+<img width="1406" height="950" alt="image" src="https://github.com/user-attachments/assets/9fd05d1b-f57e-440c-86cd-5649295176a5" />
 
-![alt text](image-15.png)
+<img width="1418" height="934" alt="image" src="https://github.com/user-attachments/assets/f01407d9-0160-46d9-be90-b67de554ae59" />
+
 ```
 
 ---
