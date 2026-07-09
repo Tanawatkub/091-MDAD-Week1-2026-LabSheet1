@@ -882,7 +882,8 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 
 > 📝 **แบบฝึกหัด:** วาด Widget Tree ของโค้ดนี้ลงในใบงาน
-``
+```
+```
 ![alt text](image-17.png)
 ```
 
