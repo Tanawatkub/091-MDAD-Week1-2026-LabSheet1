@@ -883,9 +883,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
 > 📝 **แบบฝึกหัด:** วาด Widget Tree ของโค้ดนี้ลงในใบงาน
 ```
-```
-![alt text](image-17.png)
-```
+
 
 
 ---
@@ -1076,7 +1074,7 @@ class ProfilePage extends StatelessWidget {
 
 > 🔍 **ข้อสังเกต:** Hot Reload vs Hot Restart ต่างกันอย่างไร? บันทึกการสังเกตลงในใบงาน
 
-![alt text](image-12.png)
+
 ---
 
 ## 🧪 การทดลองที่ 3: ทดลองใช้งาน Google AI Studio
@@ -1139,8 +1137,7 @@ class ProfilePage extends StatelessWidget {
 ```
 
 > 🔍 **เปรียบเทียบ:** ผลลัพธ์จาก Prompt แบบ Simple vs Detailed ต่างกันอย่างไร?
-![alt text](image-13.png)
-![alt text](image-14.png)
+
 ---
 
 ### ขั้นตอนที่ 3: สร้าง API Key
