@@ -430,6 +430,8 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 > 📝 **บันทึกผล:** จดบันทึก Error (`[✗]`) ที่พบและทำการแก้ไขตามคำแนะนำ แต่ไม่ต้องแก้ `[!] Android Studio`
 
+![alt text](image.png)
+
 ---
 
 ### ขั้นตอนที่ 4: ติดตั้ง Android SDK Command-line Tools (แทน Android Studio)
@@ -882,8 +884,8 @@ class _MyHomePageState extends State<MyHomePage> {
 ```
 
 > 📝 **แบบฝึกหัด:** วาด Widget Tree ของโค้ดนี้ลงในใบงาน
-```
-
+``
+![alt text](image-1.png)
 
 
 ---
@@ -1074,7 +1076,7 @@ class ProfilePage extends StatelessWidget {
 
 > 🔍 **ข้อสังเกต:** Hot Reload vs Hot Restart ต่างกันอย่างไร? บันทึกการสังเกตลงในใบงาน
 
-
+![alt text](image-2.png)
 ---
 
 ## 🧪 การทดลองที่ 3: ทดลองใช้งาน Google AI Studio
@@ -1137,6 +1139,8 @@ class ProfilePage extends StatelessWidget {
 ```
 
 > 🔍 **เปรียบเทียบ:** ผลลัพธ์จาก Prompt แบบ Simple vs Detailed ต่างกันอย่างไร?
+![alt text](image-3.png)
+![alt text](image-4.png)
 
 ---
 
@@ -1422,7 +1426,7 @@ flutter run
 flutter doctor output:
 ┌─────────────────────────────────────────────────────────┐
 │                                                         │
-│  ![alt text](image-1.png)                               │
+│         ![alt text](image-5.png)                        │
 │                                                         │
 └─────────────────────────────────────────────────────────┘
 
@@ -1434,13 +1438,14 @@ Android SDK Version: 36.1.0
 ### 3.2 Screenshot ของ Flutter App
 
 ```
-![alt text](image-20.png)
+![alt text](image-6.png)
 
 
 **Widget Tree ที่วาด:**
 
 ``
-![alt text](image-15.png)
+![alt text](image-7.png)
+
 
 MaterialApp
 └── ?
@@ -1468,7 +1473,7 @@ MaterialApp
 
 ใช้ Material Design 3 และรับค่าผ่าน Constructor Parameters
 
-![alt text](image-3.png)
+![alt text](image-8.png)
 
 ```
 
@@ -1484,25 +1489,200 @@ MaterialApp
 5. ขนาดอุณหภูมิต้องใหญ่และชัดเจน
 
 ให้โค้ดที่สมบูรณ์และใช้งานได้เลย ไม่ต้อง Comment อธิบาย
+```
+import 'package:flutter/material.dart';
+import 'pages/ai_chat_page.dart';
 
-![alt text](image-4.png)
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Weather & AI Demo',
+      theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
+        useMaterial3: true,
+      ),
+      home: const ProfilePage(),
+    );
+  }
+}
+
+class ProfilePage extends StatelessWidget {
+  const ProfilePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Profile & AI Chat'),
+      ),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              const WeatherCard(
+                city: 'Bangkok',
+                temperature: 32.5,
+                condition: 'sunny',
+                humidity: 60,
+              ),
+              const SizedBox(height: 24),
+              ElevatedButton.icon(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const AiChatPage(),
+                    ),
+                  );
+                },
+                icon: const Icon(Icons.smart_toy),
+                label: const Text('ทดลอง AI Chat'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// --- ตัว Widget WeatherCard ---
+class WeatherCard extends StatelessWidget {
+  final String city;
+  final double temperature;
+  final String condition;
+  final int humidity;
+
+  const WeatherCard({
+    super.key,
+    required this.city,
+    required this.temperature,
+    required this.condition,
+    required this.humidity,
+  });
+
+  IconData _getWeatherIcon(String condition) {
+    switch (condition.toLowerCase()) {
+      case 'sunny':
+        return Icons.wb_sunny;
+      case 'cloudy':
+        return Icons.cloud;
+      case 'rainy':
+        return Icons.water_drop;
+      default:
+        return Icons.help_outline;
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      elevation: 8,
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+      child: Container(
+        padding: const EdgeInsets.all(24),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(20),
+          gradient: const LinearGradient(
+            colors: [Color(0xFF2196F3), Color(0xFF90CAF9)],
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+          ),
+        ),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              city,
+              style: const TextStyle(
+                color: Colors.white,
+                fontSize: 24,
+                fontWeight: FontWeight.w600,
+              ),
+            ),
+            const SizedBox(height: 16),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(
+                  _getWeatherIcon(condition),
+                  size: 64,
+                  color: Colors.white,
+                ),
+                const SizedBox(width: 20),
+                Text(
+                  '${temperature.toStringAsFixed(1)}°C',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 48,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 16),
+            Text(
+              condition.toUpperCase(),
+              style: const TextStyle(
+                color: Colors.white70,
+                fontSize: 18,
+                letterSpacing: 1.2,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
+            const Divider(color: Colors.white24, height: 32),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const Icon(Icons.opacity, color: Colors.white70, size: 20),
+                const SizedBox(width: 8),
+                Text(
+                  'Humidity: $humidity%',
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+```
+![alt text](image-9.png)
 
 ```
 
 **ความแตกต่างของผลลัพธ์:**
 ```
-![alt text](image-5.png)
-![alt text](image-6.png)
+![alt text](image-10.png)
+
+![alt text](image-11.png)
 ที่ต่างคือสี
 ```
 
 ### 3.5 Screenshot ของ AI Chat App
 
 ```
-![alt text](image-7.png)
-![alt text](image-8.png)
-![alt text](image-9.png)
-![alt text](image-10.png)
+![alt text](image-12.png)
+
+![alt text](image-13.png)
+
+![alt text](image-14.png)
+
+![alt text](image-15.png)
 ```
 
 ---
